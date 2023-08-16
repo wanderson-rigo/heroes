@@ -1,3 +1,3 @@
-# Material sobre Javascript das aulas de Lógica de Prograamação do IFC-Videira
+# Material sobre Javascript das aulas de Lógica de Programação do IFC-Videira
 
 Pode copiar!
