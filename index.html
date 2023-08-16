@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>Título</title>
+		<script>
+			alert("Olá turma!"); console.log("está chovendo!");
+		</script>
+		<script  type="text/javascript" src="js/myscript.js">
+		</script>
+		<style>
+			.h1_1 {
+				background-color: crimson;
+			}		
+			.h1_2 {
+				background-color: teal;
+			}
+		</style>			
+	</head>
+	<body>
+		<h1 id="frase"
+			onclick="trocarFrase()"
+			onmouseover="trocarClasse()"
+			class="h1_1">
+			Olá Javascript legal
+		</h1>
+		<input id="novaFrase" type="text"><br>
+		<input id="botao" type="button" 
+			value="Trocar Frase" onclick="trocarTexto()"><br>
+		<hr>
+		<input type="number" placeholder="123" id="n1" />
+		<input type="number" placeholder="456" id="n2" />
+		=
+		<input type="text" readonly id="resultado" /><br>
+		<input type="button" value="+" onclick="somar()" />
+		<input type="button" value="-" onclick="subtrair()"/>
+		<input type="button" value="*" onclick="multiplicar()"/>
+		<input type="button" value="/" onclick="dividir()"/>
+		<input type="button" value="**" onclick="exponenciação()"/>		
+		<input type="button" value="iguais?" onclick="iguais()"/>
+		<input type="button" value="pares?" onclick="pares()"/>
+		<hr>
+		<a href="login.html">Faça Login</a>
+		</body>
+</html>
