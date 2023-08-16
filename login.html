@@ -1,28 +1,47 @@
 <html>
 	<head>
-		<title>Titulo</title>
-		<script type="text/javascript" src="js/myscript.js"></script>
-		<script>
-			function validar(){
-				var email = gebi("idEmail").value; 
-				var senha = gebi("idSenha").value;
-			}
-			function maiuscula(){
-				var email = gebi("idEmail").value;
-				gebi("idEmail").value = email.toUpperCase();
-			}
-		</script>
+		<title>Login</title>
+        <script  type="text/javascript" 
+        src="js/myscript.js"></script>
+        <script>
+            function perguntar(){
+                var resposta = prompt("Diga \n seu nome", "Wanderson")
+                escrever(resposta)
+
+                var ok = confirm("Seu nome é: " + resposta)
+                escrever(ok)
+            }
+
+            function escrever(msg){
+                alert(msg)
+                console.log(msg)
+                //document.write(msg + "<br>")
+            }
+
+            function maiuscula(){
+                var email = gebi("email").value
+                var emailEmMaiuscula = email.toUpperCase()
+                gebi("email").value = emailEmMaiuscula
+            }
+
+            function validar(){
+                var senha = gebi("senha").value
+                if(senha == 12345){
+                    window.location.replace("ola.html")
+                }else{
+                    alert("Erro!")
+                }               
+            }
+        </script>	
 	</head>
-	<body>
-		<center>
-			<form>
-				<fieldset align="center" style="width:270px"> 
-					<legend>Login:</legend>
-					Email: <input id="idEmail" type="text" onblur="maiuscula();"><br>
-					Senha: <input id="idSenha" type="password"><br> 
-					<input type="button" value="Enviar" onclick="validar();"> 
-				</fieldset> 
-			</form> 
-		</center> 
-	</body> 
+    <body>
+        <center>
+            <fieldset align="center" style="width:270px">
+                <legend>Login:</legend>    
+                E-mail <input onblur="maiuscula()" type="text" id="email" /><br>
+                Senha <input type="password" id="senha" /><br>
+                <input type="button" value="Enviar" onclick="validar()" />
+            </fieldset>
+        </center>
+    </body>
 </html>
