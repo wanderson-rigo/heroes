@@ -1,8 +1,31 @@
 <html>
-	<head>
-		<title>Boas vindas!</title>        
+
+    <head>
+        <title>Boas vindas!</title>
+        <script>
+            var cidade = prompt("Onde você mora?", "Videira")
+            if (cidade === "Videira") {
+                alert("Bem vindo à 4a melhor cidade do Brasil")
+            } else {
+                alert("Saudações")
+            }
+
+            var fruta = prompt("Qual fruta você gosta?",
+             "laranja | maçã | banana")
+            switch (fruta) {
+                case "laranja":
+                    msg = "É rica em vitamina C!"
+                case "maçã":
+                    msg = "É uma tentação!"
+                case "banana":
+                    msg = "Boa escolha!"
+            }
+            alert(msg)
+        </script>
     </head>
+
     <body>
         Olá galera!
     </body>
+
 </html>

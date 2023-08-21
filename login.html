@@ -11,7 +11,8 @@
                 if(senha == 12345){
                     var ok = confirm("Confirma login?")
                     if(ok){
-                        window.location.replace("ola.html");
+                        //window.location.replace("ola.html");
+                        gebi("meuForm").submit()
                     }
                 }else{
                     alert("Erro")
@@ -47,12 +48,12 @@
 
     <body>
         <center>
-			<form>
+			<form id="meuForm" action="http://jkorpela.fi/cgi-bin/echo.cgi">
 				<fieldset align="center" style="width:270px"> 
 					<legend>Login:</legend>
-					Email: <input id="idEmail" type="text"
+					Email: <input id="idEmail" name="email" type="text"
                         onblur="maiuscula();"><br>
-					Senha: <input id="idSenha" type="password"><br> 
+					Senha: <input id="idSenha" name="senha" type="password"><br> 
 					<input type="button" value="Enviar" onclick="validar();"> 
 				</fieldset> 
 			</form> 
