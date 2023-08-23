@@ -1,0 +1,47 @@
+<html>
+	<head>	
+		<meta http-equiv="Content-Type" 
+		content="text/html;charset=iso-8859-1" />
+		<title>Título</title>
+		<script>
+			function validar(){				
+				var campoNome = gebi("idNome")
+				var valorNome = campoNome.value
+				
+				if(valorNome.length === 0){
+					alert("Preencha o nome!")                   
+					campoNome.style.backgroundColor = "rgb(255, 99, 71)"
+                    campoNome.focus()                          
+					return;
+				}else{
+                    campoNome.style.backgroundColor = "white"
+                }
+
+                var campoIdade = gebi("idIdade")
+                var valorIdade = campoIdade.value
+				
+				if(valorIdade < 9){
+					alert("Preencha uma idade maior que 9!")                   
+					campoIdade.style.backgroundColor = "rgb(255, 99, 71)"
+                    campoIdade.focus()                          
+					return;
+				}else{
+                    campoIdade.style.backgroundColor = "white"
+                }
+				gebi("meuForm").submit()
+			}
+		</script>		
+		<script type="text/javascript" src="js/myscript.js"></script>
+	</head>
+	<form id="meuForm" action="http://jkorpela.fi/cgi-bin/echo.cgi">
+		<fieldset align="center" style="width:270px">
+			<legend>Informações:</legend>
+			Nome: <input autofocus placeholder="Fulano de Tal" 
+            id="idNome" name="nome" type="text"><br>
+            Idade: <input placeholder="45" 
+            id="idIdade" name="idade" type="number"><br>
+			<input  type="button" value="Enviar" onclick="validar();">
+		</fieldset>
+	</form>	
+</body>
+</html>
