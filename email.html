@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Título</title>        
+        <script type="text/javascript" src="js/myscript.js"></script>        
+        <link rel="stylesheet" href="css/mystyle.css">        
+        <script>
+            function validarEmail() {
+                var email = gebi("idEmail").value
+
+                if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+                    alert("Email inválido!")
+                    return
+                }
+                //sucesso!
+                gebi("idForm").submit()
+            }
+        </script>    
+    </head>
+
+    <body>
+        <center>
+            <form id="idForm" action="https://app.headlessforms.cloud/api/v1/form-submission/nkJtA1ewcj" method="POST">
+                <label for="idEmail">Meu E-mail</label>
+                <input type="email" 
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"
+                    name="email" id="idEmail" required><br>
+                <label for="idNome">Meu Nome</label>
+                <input type="text" name="nome" id="idNome" required><br>
+                <textarea rows="7" cols="28" name="corpo" placeholder="O texto do seu e-mail." required></textarea><br>
+                <input type="submit" value="Enviar" onclick="">        
+            </form>
+        </center>
+        Ou envie um whats via
+        <a href="https://wa.me/5548999999999?
+            text=mensagem%20de%20hoje">
+            WhatsApp
+        </a>
+    </body>
+
+</html>
