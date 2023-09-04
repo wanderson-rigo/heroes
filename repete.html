@@ -1,0 +1,52 @@
+<html>
+
+    <head>
+        <title>Título</title>
+        <script>
+            function imprimir(algo) {
+                console.log(algo)
+                document.write(algo + "<br>")
+            }
+
+            function contar() {
+                var numeros = [];
+                var somaTodos = 0
+                var somaPares = 0
+                var somaImpares = 0
+                var quantidadePares = 0
+                var quantidadeImpares = 0
+
+                for (let index = 1; index < 6; index++) {
+                    var numero = prompt("Diga um número");
+                    numeros.push(numero); //adiciona
+                }                
+
+                for (let contador = 0; contador < numeros.length; contador++) {
+                    const numero =  parseInt(numeros[contador]);
+                    imprimir(numero)
+
+                    somaTodos = somaTodos + numero
+
+                    if(numero % 2 == 0){ // se é par
+                        somaPares = somaPares + numero
+                        quantidadePares++
+                    }else{               // se é ímpar
+                        somaImpares = somaImpares + numero
+                        quantidadeImpares++
+                    }                    
+                }
+                    imprimir(" somaTodos = " + somaTodos)
+                    imprimir(" somaPares = " + somaPares)
+                    imprimir(" somaImpares = " + somaImpares)
+                    imprimir(" quantidadePares = " + quantidadePares)
+                    imprimir(" quantidadeImpares = " + quantidadeImpares)
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <input type="button" value="Enviar" onclick="contar()">
+    </body>
+
+</html>
