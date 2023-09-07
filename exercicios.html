@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Exercícios</title>
+        <script>
+            var medias = []
+
+            var primeiro = prompt("Diga a média do 1o tri")
+            medias.push(primeiro)
+
+            var segundo = prompt("Diga a média do 2o tri")
+            medias.push(segundo)
+
+            var somatorio = 0
+            for (let index = 0; index < medias.length; index++) {
+                const nota = medias[index];
+                somatorio = somatorio + parseInt(nota)                
+            }
+            
+            console.info("somatorio é " + somatorio)
+            var notaFaltante = 180 - somatorio
+
+            if(notaFaltante > 100){
+                console.error("Não deu...")
+            }else{
+                console.warn("Se esforce para tirar: " + notaFaltante)
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1>Exercícios</h1>
+    </body>
+</html>

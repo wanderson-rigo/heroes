@@ -3,6 +3,7 @@
     <head>
         <title>Título</title>
         <script>
+
             function imprimir(algo) {
                 console.log(algo)
                 document.write(algo + "<br>")
@@ -19,10 +20,13 @@
                 for (let index = 1; index < 6; index++) {
                     var numero = prompt("Diga um número");
                     numeros.push(numero); //adiciona
-                }                
+                }
+
+                console.table(numeros)
 
                 for (let contador = 0; contador < numeros.length; contador++) {
                     const numero =  parseInt(numeros[contador]);
+
                     imprimir(numero)
 
                     somaTodos = somaTodos + numero
