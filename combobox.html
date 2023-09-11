@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
-
     <head>
         <title>Combobox com Função Específica</title>
     </head>
-
     <body>
         <h1>Selecione uma opção:</h1>
         <select id="minhaComboBox" onchange="selecionarOpcao()">
@@ -13,34 +11,24 @@
             <option value="opcao2">Atividade 02</option>
         </select>
         <script>
-
             function imprimir(algo) {
                 console.log(algo)
                 document.write(algo + "<br>")
             }
-
             function atividade01() {
-                var a = 10
-                var b = 20
-                imprimir(a + b)
             }
-
             function atividade02() {
-                var a = 100
-                var b = 200
-                imprimir(a + b)
             }
-
             function selecionarOpcao() {
                 const comboBox = document.getElementById("minhaComboBox");
                 const opcaoSelecionada = comboBox.value;
 
                 switch (opcaoSelecionada) {
                     case "opcao1":
-                        atividade01()
+                        atividade01()// é uma função
                         break;
                     case "opcao2":
-                        atividade02()
+                        atividade02() // é outra função
                         break;
                 }
             }
