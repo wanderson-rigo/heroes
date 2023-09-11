@@ -11,14 +11,26 @@
             <option value="opcao2">Atividade 02</option>
         </select>
         <script>
+
             function imprimir(algo) {
                 console.log(algo)
                 document.write(algo + "<br>")
             }
+
             function atividade01() {
+                var nome = "Fulano"
+                imprimir("Olá, " + nome)
             }
+
             function atividade02() {
+                var idade = 23
+                if(idade > 17){
+                    imprimir(idade + " é de maior!")
+                }else{
+                    imprimir(idade + " é de menor!")
+                }
             }
+
             function selecionarOpcao() {
                 const comboBox = document.getElementById("minhaComboBox");
                 const opcaoSelecionada = comboBox.value;
